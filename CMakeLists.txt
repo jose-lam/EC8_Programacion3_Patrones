@@ -3,5 +3,14 @@ project(EC8_Programacion3_Patrones)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(EC8_Programacion3_Patrones main.cpp
-        tests/test_expenses.cpp)
+add_executable(EC8_Programacion3_Patrones
+        main.cpp
+        include/expense_types.h
+        include/expenses.h
+)
+
+add_executable(run_tests
+        tests/test_expenses.cpp
+        include/expense_types.h
+        include/expenses.h
+)
