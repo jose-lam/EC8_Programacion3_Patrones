@@ -14,12 +14,12 @@
 
 ## Características Principales
 
-| Característica           | Descripción |
-|:-------------------------| :--- |
-| **Flexibilidad**         | Soporte nativo y extensible para múltiples formatos de exportación como `CSV`, `JSON` y `Texto Plano`. |
-| **Extensibilidad**       | Arquitectura basada en el patrón **Decorador**, permitiendo añadir capas de funcionalidad adicionales (como auditorías detalladas, cifrado o resúmenes estadísticos) de forma dinámica sobre cualquier exportador base. |
-| **Tipado Seguro**        | Implementación estricta de **C++20 Concepts** para validar las interfaces en tiempo de compilación, garantizando la compatibilidad absoluta entre componentes y reduciendo errores de diseño. |
-| **Factoría Funcional** | Proporciona la utilidad estandarizada `make_exporter` para instanciar de manera limpia, desacoplada y sencilla diferentes configuraciones de exportadores. |
+| Característica           | Descripción                                                                                                                                                                                                    |
+|:-------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Flexibilidad**         | Soporte nativo y extensible para múltiples formatos de exportación como `CSV`, `JSON` y `Texto Plano`.                                                                                                         |
+| **Extensibilidad**       | Arquitectura basada en el patrón **Decorador**, permitiendo añadir capas de funcionalidad adicionales (como auditorías detalladas o resúmenes) de forma dinámica sobre cualquier exportador base. |
+| **Tipado Seguro**        | Implementación estricta de **C++20 Concepts** para validar las interfaces en tiempo de compilación, garantizando la compatibilidad absoluta entre componentes y reduciendo errores de diseño.                  |
+| **Factoría Funcional** | Proporciona la utilidad estandarizada `make_exporter` para instanciar de manera limpia, desacoplada y sencilla diferentes configuraciones de exportadores.                                                     |
 
 ---
 
