@@ -24,3 +24,6 @@ add_executable(run_tests
         include/expense_decorators.h
         include/expense_concepts.h
 )
+
+enable_testing()
+add_test(NAME expenses_tests COMMAND expenses_tests)
