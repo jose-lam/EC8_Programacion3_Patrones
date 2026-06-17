@@ -14,7 +14,11 @@ struct AuditedExporter {
     [[nodiscard]] std::string export_expenses(const ExpenseList& expenses) const {
         auto ahora_utc = std::chrono::system_clock::now();
         std::chrono::zoned_time tiempo_lima{"America/Lima", ahora_utc};
-        std::string fecha_hora = std::format("{:%Y-%m-%d %H:%M:%S}", tiempo_lima);
+        std::time_t t = std::chrono::system_clock::to_time_t(tiempo_lima.get_sys_time());
+        std::tm tm_local = *std::localtime(&t);
+        char buffer[20];
+        std::strftime(buffer, sizeof(buffer), "%Y-%m-%d %H:%M:%S", &tm_local);
+        std::string fecha_hora(buffer);
 
         std::string base_export = inner.export_expenses(expenses);
 
