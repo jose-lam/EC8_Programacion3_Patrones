@@ -18,7 +18,7 @@ struct AuditedExporter {
 
         std::string base_export = inner.export_expenses(expenses);
 
-        std::string audit_log = "[Auditoria] Exportacion realizada " + fecha_hora + "\n";
+        std::string audit_log = "[audit] Exportacion realizada " + fecha_hora + "\n";
 
         return audit_log + base_export + "\n";
     }
@@ -29,7 +29,7 @@ struct SummaryExporter {
     Inner inner;
     [[nodiscard]] std::string export_expenses(const ExpenseList& expenses) const {
         std::string base_export = inner.export_expenses(expenses);
-        std::string summary_export = "[Summary]\n";
+        std::string summary_export = "[summary]\n";
         std::unordered_map<std::string, double> summary;
         double sum = 0;
         for (const auto& e : expenses) {
