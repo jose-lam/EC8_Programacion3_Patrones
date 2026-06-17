@@ -6,7 +6,7 @@
 
 struct CsvExporter {
     [[nodiscard]] static std::string export_expenses(const ExpenseList& expenseList) {
-        std::string result;
+        std::string result = "date,category,detail,amount";
         std::string delimiter = " , ";
         for (const auto& e : expenseList) {
             result += e.date + delimiter;
